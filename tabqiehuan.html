@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tab实现</title>
+</head>
+<style type="text/css">
+     .Tab_box { 
+       width: 572px; 
+       height: 200px;
+       margin: 0 auto;
+       border: 1px solid #999; 
+       font: 14px "微软雅黑"; 
+       color: #333;
+     }
+    ul { 
+        list-style:none; 
+        margin: 0; 
+        padding: 0; 
+    } 
+    .clearfix:after { 
+        content:"."; 
+        display:block; 
+        height:0; 
+        visibility:hidden; 
+        clear:both; 
+    }  
+    .Tab_title li { 
+        display: block; 
+        float: left; 
+        width: 190px; 
+        line-height: 32px; 
+        text-align: center; 
+        background: #f1f1f1; 
+        border-left:1px solid #cecece; 
+        border-bottom: 1px solid #cecece; 
+    }
+    .Tab_title li:first-child { 
+        border-left: none; 
+    }
+    .Tab_title li.selected { 
+        background: #fff; 
+        border-bottom: none; 
+    }
+    .content { 
+        display:none; 
+        padding: 20px; 
+    }
+    .active { 
+        display: block; 
+    }
+</style>
+<body>
+     <div class="Tab_box">
+        <ul class="Tab_title clearfix">
+            <li class="selected">课程</li>
+            <li>学习计划</li>
+            <li>技能图谱</li>
+        </ul>
+        <div class="content active">课程内容</div>
+        <div class="content">学习计划内容</div>
+        <div class="content">技能图谱内容</div>
+    </div>
+</body>
+</html>
